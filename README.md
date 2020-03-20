@@ -28,18 +28,21 @@
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_2.PNG">
 </p>
 
+------------
 
 > 3. Переходим во вкладку **Project Manager**. Задаем **Name** и **Project Location** к проекту. в **Toolchain/IDE** необходимо выбрать **MDK-ARM**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_3.PNG">
 </p>
 
+------------
 
 > 4. Переходим во вкладку **Pinout & Configuration**, раздел **System Core**, пункт **GPIO**. В окне **Pinout view** выбираем вывод **PA1** и настраиваем режим внешнего прерывания **GPIO_EXTI1**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_4.PNG">
 </p>
 
+------------
 
 > 5. После выбора вывода и прерывания в окне **Configuration** можно настроить вывод **PA1**. В окне **PA1 Configuration** необходимо настроить вызов прерывания по спаду - **Falling** и подтянуть к питанию - **Pull-up**.
 <p align="center">
