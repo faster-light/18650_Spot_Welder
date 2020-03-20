@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"spot_welder\startup_stm32f103xb.o"
+"spot_welder\main.o"
+"spot_welder\stm32f1xx_it.o"
+"spot_welder\stm32f1xx_hal_msp.o"
+"spot_welder\fonts.o"
+"spot_welder\ssd1306.o"
+"spot_welder\stm32f1xx_hal_gpio_ex.o"
+"spot_welder\stm32f1xx_hal_i2c.o"
+"spot_welder\stm32f1xx_hal.o"
+"spot_welder\stm32f1xx_hal_rcc.o"
+"spot_welder\stm32f1xx_hal_rcc_ex.o"
+"spot_welder\stm32f1xx_hal_gpio.o"
+"spot_welder\stm32f1xx_hal_dma.o"
+"spot_welder\stm32f1xx_hal_cortex.o"
+"spot_welder\stm32f1xx_hal_pwr.o"
+"spot_welder\stm32f1xx_hal_flash.o"
+"spot_welder\stm32f1xx_hal_flash_ex.o"
+"spot_welder\stm32f1xx_hal_exti.o"
+"spot_welder\stm32f1xx_hal_tim.o"
+"spot_welder\stm32f1xx_hal_tim_ex.o"
+"spot_welder\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Spot_Welder\Spot_Welder.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Spot_Welder.map" -o Spot_Welder\Spot_Welder.axf
