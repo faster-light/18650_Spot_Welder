@@ -19,23 +19,65 @@
 
 [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html "STM32CubeMX")  - мощный генератор проектов от STMicroelectronics, позволяющий настроить порты ввода/вывода, таймеры, прерывания и т.п. и создать проект для нескольких сред разработки.
 [Keil uVision](https://www.keil.com/download/product/ "Keil uVision") MDK-Arm - среда разработки для контроллеров с ядрами прхитектуры ARM (напр. Cortex-M).
-### Туториал по насттройке контроллера в STM32CubeMX
-> Открываем STM32CubeMX, создаем новый проект.
-<p align="center">
-  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_1.PNG">
-</p>
-
-> Находим и выбираем используемый микроконтроллер
+### Туториал по настройке контроллера в STM32CubeMX
+> 1. Открываем **STM32CubeMX**, создаем новый проект нажатием на кнопку **ACCESS TO MCU SELECTOR**.
+> 2. Находим и выбираем используемый микроконтроллер **STM32F103C8**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_2.PNG">
 </p>
 
-> Переходим во вкладку Project Manager. Задаем Name и Project Location к проекту. в Toolchain/IDE необходимо выбрать MDK-ARM
+> 3. Переходим во вкладку **Project Manager**. Задаем **Name** и **Project Location** к проекту. в **Toolchain/IDE** необходимо выбрать **MDK-ARM**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_3.PNG">
 </p>
 
-> Переходим во вкладку Pinout & Configuration, раздел System Core, пункт GPIO.
+> 4. Переходим во вкладку **Pinout & Configuration**, раздел **System Core**, пункт **GPIO**. В окне **Pinout view** выбираем вывод **PA1** и настраиваем режим внешнего прерывания **GPIO_EXTI1**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_4.PNG">
+</p>
+
+> 5. После выбора вывода и прерывания в окне **Configuration** можно настроить вывод **PA1**. В окне **PA1 Configuration** необходимо настроить вызов прерывания по спаду - **Falling** и подтянуть к питанию - **Pull-up**.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_5.PNG">
+</p>
+
+> 6. Во вкладке **NVIC** для этого вывода нужно включить прерывание для** EXTI line1 interrupt**.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_6.PNG">
+</p>
+
+> 7. Аналогичным образом добавим остальные выводы и настроим их, согластно таблице.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_7.PNG">
+</p>
+
+> 8. И включим прерывания.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_8.PNG">
+</p>
+
+> 9. Переходим в пункт **RCC**. Так как на плане разведены оба кварцевых резонатора, указываем это в окне **Mode**.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_9.PNG">
+</p>
+
+> 10. В пункте **SYS** необходимо указать режим **Debug** - **Serial Wire** для работы с **St-Link v2**.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_10.PNG">
+</p>
+
+> 11. В разделе **Connectivity** включим интерфейс **I2C1** и настроим его на соседние ножки **PB8** и **PB9** указав это в выпадающем списке.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_11.PNG">
+</p>
+
+> 12. Осталось настроить таймеры. Перейдем в раздел **Timers** и выберем таймер **TIM1**. Источник тактирования - **Clock Source** указать **Internal Clock**. Так же необходимо включить **One Pulse Mode**. 
+> В Настройках таймера укжем **Prescaler** - **799** (что будет соответствовать шагу в **0.1 мс**), **Counter Period** - **89** (**9 мс** для каждой полуволны синусоиды продолжительностью **10 мс**), **Pulse - 45**. Эту велечину мы будем менять в программе.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_13.PNG">
+</p>
+
+>13. Для таймера **TIM1** во вкладке **NVIC Settings** необходимо включить прерывание по сравнению - **TIM1 capture compare interrupt**.
+<p align="center">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_14.PNG">
 </p>
