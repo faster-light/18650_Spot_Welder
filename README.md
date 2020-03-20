@@ -1,4 +1,4 @@
-﻿# 18650 SPOT WELDER
+# 18650 SPOT WELDER
 Проект сварочного аппарата для аккумуляторов 18650.
 
 ## Железо
@@ -19,4 +19,15 @@
 
 [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html "STM32CubeMX")  - мощный генератор проектов от STMicroelectronics, позволяющий настроить порты ввода/вывода, таймеры, прерывания и т.п. и создать проект для нескольких сред разработки.
 [Keil uVision](https://www.keil.com/download/product/ "Keil uVision") MDK-Arm - среда разработки для контроллеров с ядрами прхитектуры ARM (напр. Cortex-M).
+### Туториал по насттройке контроллера в STM32CubeMX
+![](https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_1.PNG)
+> Открываем STM32CubeMX, создаем новый проект.
 
+![](https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_2.PNG)
+> Находим и выбираем используемый микроконтроллер
+
+![](https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_3.PNG)
+> Переходим во вкладку Project Manager. Задаем Name и Project Location к проекту. в Toolchain/IDE необходимо выбрать MDK-ARM
+
+![](https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_4.PNG)
+> Переходим во вкладку Pinout & Configuration, раздел System Core, пункт GPIO.
