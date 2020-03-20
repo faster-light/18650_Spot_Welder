@@ -32,7 +32,7 @@
 
 > **3**. Переходим во вкладку **Project Manager**. Задаем **Name** и **Project Location** к проекту. в **Toolchain/IDE** необходимо выбрать **MDK-ARM**.
 <p align="center">
-  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_3.PNG">
+  <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_3.JPG">
 </p>
 
 ------------
