@@ -67,7 +67,7 @@
 
 > **8**. И включим прерывания.
 <p align="center">
-  <img width="90%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_8.JPG">
+  <img width="75%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_8.JPG">
 </p>
 
 ------------
