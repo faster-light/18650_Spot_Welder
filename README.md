@@ -60,7 +60,7 @@
 
 > **7**. Аналогичным образом добавим остальные выводы и настроим их, согластно таблице.
 <p align="center">
-  <img width="90%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_7.JPG">
+  <img width="75%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_7.JPG">
 </p>
 
 ------------
@@ -103,7 +103,7 @@
 
 >**13**. Для таймера **TIM1** во вкладке **NVIC Settings** необходимо включить прерывание по сравнению - **TIM1 capture compare interrupt**.
 <p align="center">
-  <img width="90%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_14.JPG">
+  <img width="80%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_14.JPG">
 </p>
 
 ------------
@@ -113,7 +113,7 @@
   <img width="85%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_15.JPG">
 </p>
 <p align="center">
-  <img width="90%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_16.JPG">
+  <img width="80%" src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_16.JPG">
 </p>
 
 ------------
