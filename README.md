@@ -23,6 +23,7 @@
 [Keil uVision](https://www.keil.com/download/product/ "Keil uVision") MDK-Arm - среда разработки для контроллеров с ядрами прхитектуры ARM (напр. Cortex-M).
 ### Туториал по настройке контроллера в STM32CubeMX
 > **1**. Открываем **STM32CubeMX**, создаем новый проект нажатием на кнопку **ACCESS TO MCU SELECTOR**.
+
 > **2**. Находим и выбираем используемый микроконтроллер **STM32F103C8**.
 <p align="center">
   <img src="https://github.com/faster-light/18650_Spot_Welder/blob/master/tutorial/tutorial_2.PNG">
